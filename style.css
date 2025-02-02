@@ -1,0 +1,97 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	min-height: 100%;
+}
+
+.navbar-brand {
+	display: contents;
+}
+
+.navbar-brand img {
+	width: 150px;
+	margin-block: 5px;
+}
+
+.main-container {
+	text-align: center;
+}
+
+#hero {
+	aspect-ratio: 4/3;
+	max-width: 1000px;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background-image: url("./images/Kamakhya-o3.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.active-btn,
+.inactive-btn {
+	cursor: pointer;
+}
+
+.active-btn {
+	background-color: #33ccff;
+	padding: 4px 12px;
+	border-radius: 25px;
+}
+
+.inactive-btn {
+	border-color: #33ccff;
+	border-style: solid;
+	padding: 4px 12px;
+	border-radius: 25px;
+}
+
+.inactive-btn:hover {
+	border-color: white;
+}
+
+img {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.card {
+	width: 300px;
+	margin: 20px auto;
+}
+
+.card-text {
+	padding-right: 10px;
+	max-height: 200px;
+	overflow-y: auto;
+	font-size: small;
+}
+
+.card-text::-webkit-scrollbar {
+	width: 7px;
+}
+
+.card-text::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+.card-text::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 6px;
+}
+
+.card-text::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+footer {
+	clear: both;
+	position: relative;
+	bottom: 0;
+	margin-top: auto;
+}
