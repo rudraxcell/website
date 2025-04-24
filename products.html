@@ -26,34 +26,39 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
-			<div class="container-fluid">
+		<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+			<div class="container">
 				<a href="/index.html" class="navbar-brand">
-					<img src="./logo.svg" alt="logo" class="col-5" />
+					<img
+						src="./logo.svg"
+						alt="logo"
+						class="d-inline-block align-top" />
 				</a>
 				<button
+					type="button"
 					class="navbar-toggler"
 					data-bs-toggle="collapse"
-					data-bs-target="#nav"
-					aria-controls="nav"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
 					aria-label="Expand Navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="nav">
-					<ul class="nav navbar-nav">
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a href="./index.html" class="nav-link">Home</a>
+							<a href="/index.html" class="nav-link">Home</a>
 						</li>
 						<li class="nav-item">
 							<a
-								href="./products.html"
+								href="/products.html"
 								class="nav-link active"
 								aria-current="page">
 								Products
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="./about.html" class="nav-link">About Us</a>
+							<a href="/about.html" class="nav-link">About Us</a>
 						</li>
 					</ul>
 				</div>
@@ -64,125 +69,163 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-10 col-md-6 col-lg-4">
-						<div class="card">
-							<img
-								src="./images/4.png"
-								class="card-img-top"
-								alt="Product Image" />
-							<div class="card-body">
-								<h5 class="card-title">ProbiTrust 15</h5>
-								<p class="card-text">
-									Prebiotics and probiotics help improve gut
-									health in people with chronic kidney disease
-									(CKD). Prebiotics are a type of fiber that
-									feed healthy gut bacteria, while probiotics
-									are live microorganisms that can help the
-									body by <br />
-									1. Restoring the balance between good and
-									bad bacteria in the gut. <br />
-									2. By reducing the production of harmful
-									toxins in the gut. <br />3. By improving
-									immune function.
-									<br />
-									<br />
-									It has a total of 15 billion spores.
-								</p>
-							</div>
-						</div>
+						<a href="/products/probitrust15.html">
+							<div class="card">
+								<img
+									src="/images/4.png"
+									class="card-img-top"
+									alt="Product Image" />
+								<div class="card-body">
+									<h5 class="card-title">ProbiTrust 15</h5>
+									<p class="card-text">
+										Prebiotics and probiotics help improve
+										gut health in people with chronic kidney
+										disease (CKD). Prebiotics are a type of
+										fiber that feed healthy gut bacteria,
+										while probiotics are live microorganisms
+										that can help the body by <br />
+										1. Restoring the balance between good
+										and bad bacteria in the gut. <br />
+										2. By reducing the production of harmful
+										toxins in the gut. <br />3. By improving
+										immune function.
+										<br />
+										<br />
+										It has a total of 15 billion spores.
+									</p>
+									<a
+										href="/products/probitrust15.html"
+										class="btn btn-primary"
+										>Learn More</a
+									>
+								</div>
+							</div></a
+						>
 					</div>
 					<div class="col-sm-10 col-md-6 col-lg-4">
-						<div class="card">
-							<img
-								src="./images/2.png"
-								class="card-img-top"
-								alt="Product Image" />
-							<div class="card-body">
-								<h5 class="card-title">ProbiTrust 45</h5>
-								<p class="card-text">
-									Prebiotics and probiotics help improve gut
-									health in people with chronic kidney disease
-									(CKD). Prebiotics are a type of fiber that
-									feed healthy gut bacteria, while probiotics
-									are live microorganisms that can help the
-									body by <br />
-									1. Restoring the balance between good and
-									bad bacteria in the gut. <br />
-									2. By reducing the production of harmful
-									toxins in the gut. <br />3. By improving
-									immune function.
-									<br />
-									<br />
-									It has a total of 45 billion spores.
-								</p>
+						<a href="/products/probitrust45.html">
+							<div class="card">
+								<img
+									src="/images/2.png"
+									class="card-img-top"
+									alt="Product Image" />
+								<div class="card-body">
+									<h5 class="card-title">ProbiTrust 45</h5>
+									<p class="card-text">
+										Prebiotics and probiotics help improve
+										gut health in people with chronic kidney
+										disease (CKD). Prebiotics are a type of
+										fiber that feed healthy gut bacteria,
+										while probiotics are live microorganisms
+										that can help the body by <br />
+										1. Restoring the balance between good
+										and bad bacteria in the gut. <br />
+										2. By reducing the production of harmful
+										toxins in the gut. <br />3. By improving
+										immune function.
+										<br />
+										<br />
+										It has a total of 45 billion spores.
+									</p>
+									<a
+										href="/products/probitrust45.html"
+										class="btn btn-primary"
+										>Learn More</a
+									>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-sm-10 col-md-6 col-lg-4">
-						<div class="card">
-							<img
-								src="./images/3.png"
-								class="card-img-top"
-								alt="Product Image" />
-							<div class="card-body">
-								<h5 class="card-title">KETAG XT</h5>
-								<p class="card-text">
-									Alpha Ketoanalogue is used in the treatment
-									of chronic kidney disease. Alpha
-									Ketoanalogue belongs to a class of drugs
-									called nutritional supplements. It follows
-									same catabolic pathways as amino acids and
-									works by improving the metabolism of protein
-									in the body, thereby improving the renal
-									function.
-								</p>
+						<a href="/products/ketagxt.html">
+							<div class="card">
+								<img
+									src="/images/3.png"
+									class="card-img-top"
+									alt="Product Image" />
+								<div class="card-body">
+									<h5 class="card-title">KETAG XT</h5>
+									<p class="card-text">
+										Alpha Ketoanalogue is used in the
+										treatment of chronic kidney disease.
+										Alpha Ketoanalogue belongs to a class of
+										drugs called nutritional supplements. It
+										follows same catabolic pathways as amino
+										acids and works by improving the
+										metabolism of protein in the body,
+										thereby improving the renal function.
+									</p>
+									<a
+										href="/products/ketagxt.html"
+										class="btn btn-primary"
+										>Learn More</a
+									>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-sm-10 col-md-6 col-lg-4">
-						<div class="card">
-							<img
-								src="./images/1.png"
-								class="card-img-top"
-								alt="Product Image" />
-							<div class="card-body">
-								<h5 class="card-title">RenoXcell</h5>
-								<p class="card-text">
-									N-Acetylcysteine and Taurine work by slowing
-									down the process of kidney cell damage and
-									improving kidney function. These tablets are
-									particularly beneficial in preventing the
-									progression of microalbuminuria (the
-									presence of small amounts of albumin in the
-									urine) in patients with kidney disease.
-								</p>
+						<a href="/products/renoxcell.html">
+							<div class="card">
+								<img
+									src="./images/1.png"
+									class="card-img-top"
+									alt="Product Image" />
+								<div class="card-body">
+									<h5 class="card-title">RenoXcell</h5>
+									<p class="card-text">
+										N-Acetylcysteine and Taurine work by
+										slowing down the process of kidney cell
+										damage and improving kidney function.
+										These tablets are particularly
+										beneficial in preventing the progression
+										of microalbuminuria (the presence of
+										small amounts of albumin in the urine)
+										in patients with kidney disease.
+									</p>
+									<a
+										href="/products/renoxcell.html"
+										class="btn btn-primary"
+										>Learn More</a
+									>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-sm-10 col-md-6 col-lg-4">
-						<div class="card">
-							<img
-								src="./images/Phosclog-400.jpg"
-								class="card-img-top"
-								alt="Product Image" />
-							<div class="card-body">
-								<h5 class="card-title">Phosclog 400</h5>
-								<p class="card-text">
-									Phosclog (Sevelamer Carbonate) is a
-									polymeric phosphate binder which is used to
-									manage high blood phosphate levels
-									(hyperphosphatemia) in patients with CKD.
-									<br />
-									<br />
-									It also plays a crucial role in maintaining
-									strong bones & reducing harmful mineral
-									accumulation in the body.
-									<br />
-									<br />
-									It also helps in reducing the risk of heart
-									disease and stroke.
-								</p>
+						<a href="/products/phosclog400.html">
+							<div class="card">
+								<img
+									src="./images/Phosclog-400.jpg"
+									class="card-img-top"
+									alt="Product Image" />
+								<div class="card-body">
+									<h5 class="card-title">Phosclog 400</h5>
+									<p class="card-text">
+										Phosclog (Sevelamer Carbonate) is a
+										polymeric phosphate binder which is used
+										to manage high blood phosphate levels
+										(hyperphosphatemia) in patients with
+										CKD.
+										<br />
+										<br />
+										It also plays a crucial role in
+										maintaining strong bones & reducing
+										harmful mineral accumulation in the
+										body.
+										<br />
+										<br />
+										It also helps in reducing the risk of
+										heart disease and stroke.
+									</p>
+									<a
+										href="/products/phosclog400.html"
+										class="btn btn-primary"
+										>Learn More</a
+									>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
