@@ -1,0 +1,9 @@
+# Node.js dependencies
+node_modules/
+
+# Editor directories
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
