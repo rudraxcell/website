@@ -1,0 +1,37 @@
+[
+  {
+    "title": "ProbiTrust 15",
+    "image": "/images/4.png",
+    "alt": "ProbiTrust 15 product image",
+    "description": "Prebiotics and probiotics help improve gut health in people with chronic kidney disease (CKD)... It has a total of 15 billion spores.",
+    "link": "/products/probitrust15.html"
+  },
+  {
+    "title": "ProbiTrust 45",
+    "image": "/images/2.png",
+    "alt": "ProbiTrust 45 product image",
+    "description": "Prebiotics and probiotics help improve gut health in people with chronic kidney disease (CKD)... It has a total of 45 billion spores.",
+    "link": "/products/probitrust45.html"
+  },
+  {
+    "title": "KETAG XT",
+    "image": "/images/3.png",
+    "alt": "KETAG XT product image",
+    "description": "Alpha Ketoanalogue is used in the treatment of chronic kidney disease... thereby improving the renal function.",
+    "link": "/products/ketagxt.html"
+  },
+  {
+    "title": "RenoXcell",
+    "image": "/images/1.png",
+    "alt": "RenoXcell product image",
+    "description": "N-Acetylcysteine and Taurine work by slowing down kidney cell damage and improving kidney function...",
+    "link": "/products/renoxcell.html"
+  },
+  {
+    "title": "Phosclog 400",
+    "image": "/images/Phosclog-400.jpg",
+    "alt": "Phosclog 400 product image",
+    "description": "Phosclog (Sevelamer Carbonate) is a polymeric phosphate binder used to manage high blood phosphate levels in CKD patients...",
+    "link": "/products/phosclog400.html"
+  }
+]

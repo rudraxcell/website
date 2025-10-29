@@ -1,12 +1,35 @@
+/* ==========================================================================
+   1. Reset & Base Styles
+   ========================================================================== */
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 }
 
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	min-height: 100%;
+	padding-top: 76px; /* Account for fixed navbar */
+}
+
+.breadcrumb {
+	margin: 1rem 0;
 }
 
 a {
@@ -14,15 +37,25 @@ a {
 	color: inherit;
 }
 
+/* ==========================================================================
+   2. Navigation & Header
+   ========================================================================== */
 .navbar-brand img {
 	width: 150px;
 	margin-block: 5px;
 }
 
+/* ==========================================================================
+   3. Layout & Container
+   ========================================================================== */
 .main-container {
-	margin-top: 100px;
+	margin-top: 2rem;
+	padding-bottom: 2rem;
 }
 
+/* ==========================================================================
+   4. Hero Section
+   ========================================================================== */
 #hero {
 	text-align: center;
 	aspect-ratio: 4/3;
@@ -32,7 +65,29 @@ a {
 	justify-content: space-evenly;
 	background-image: url("./images/Kamakhya-o3.jpg");
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
+	background-position: center;
+	aspect-ratio: auto;
+	min-height: 60vh;
+	/* contain: layout style paint; */
+}
+
+#hero h1 {
+	font-size: clamp(1.75rem, 4vw, 3rem);
+}
+#hero p {
+	font-size: clamp(0.9rem, 2vw, 1.25rem);
+	max-width: 800px;
+}
+
+.carousel-item img {
+	max-height: 300px;
+	object-fit: contain;
+}
+
+.carousel-item img:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease;
 }
 
 .active-btn,
@@ -62,33 +117,74 @@ img {
 	margin: 0 auto;
 }
 
+/* Product card image container */
+.card-img-wrapper {
+	padding: 1rem;
+	background: #fff;
+	height: 220px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card-img-wrapper .card-img-top {
+	max-width: 100%;
+	height: auto;
+	max-height: 100%;
+	object-fit: contain;
+}
+
 .card {
-	width: 300px;
-	margin: 20px auto;
+	width: 100%;
+	max-width: 350px;
+	margin: 1.5rem auto;
+	animation: fadeIn 0.5s ease-in;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.card-body {
+	padding: 1.5rem;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.card-title {
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+	color: #2c3e50;
 }
 
 .card-text {
 	padding-right: 10px;
-	max-height: 200px;
+	height: auto;
+	max-height: 180px;
 	overflow-y: auto;
-	font-size: medium;
+	font-size: 1rem;
+	margin-bottom: 1.25rem;
+	line-height: 1.6;
+	color: #505c66;
+	flex-grow: 1;
 }
 
 .card-text::-webkit-scrollbar {
-	width: 7px;
+	width: 6px;
 }
 
 .card-text::-webkit-scrollbar-track {
-	background: #f1f1f1;
+	background: #f8f9fa;
+	border-radius: 6px;
 }
 
 .card-text::-webkit-scrollbar-thumb {
-	background: #888;
+	background: #cbd5e0;
 	border-radius: 6px;
 }
 
 .card-text::-webkit-scrollbar-thumb:hover {
-	background: #555;
+	background: #a0aec0;
 }
 
 footer {
@@ -98,15 +194,312 @@ footer {
 	margin-top: auto;
 }
 
-/* Added padding to the top and bottom of the 'Learn More' buttons */
+.footer-background {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   5. Buttons & Interactive Elements
+   ========================================================================== */
 .btn-primary {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	display: block;
-	margin: 1rem auto;
+	padding: 0.75rem 1.5rem;
+	display: inline-block;
+	margin-top: auto;
+	border-radius: 6px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	font-weight: 500;
+	text-align: center;
+	min-width: 140px;
+}
+
+.btn-primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:focus-visible {
+	outline: 2px solid #0d6efd;
+	outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.btn-primary {
+		transition: none;
+		transform: none;
+	}
+	.btn-primary:hover {
+		transform: none;
+	}
 }
 
 .related-product-card {
 	height: 100px;
 	font-size: small;
+}
+
+.distributor-table {
+	margin-bottom: 0;
+}
+
+.distributor-table td,
+.distributor-table th {
+	padding: 0.75rem;
+	vertical-align: middle;
+}
+
+.distributor-table td:nth-child(2) {
+	max-width: 200px;
+	white-space: normal;
+	word-wrap: break-word;
+}
+
+.distributor-card {
+	animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.distributor-card .card-body {
+	padding: 1rem 0;
+}
+
+.distributor-card .table-responsive {
+	margin: 0;
+}
+
+#distributor-list {
+	overflow: visible !important;
+}
+
+/* Fix for Bootstrap alerts overridden by global reset */
+.alert {
+	padding: 1rem 1.25rem;
+	margin: 1rem 0;
+	border: 1px solid transparent;
+	border-radius: 0.375rem;
+}
+
+.alert-danger {
+	color: #842029;
+	background-color: #f8d7da;
+	border-color: #f5c2c7;
+}
+
+/* Center error action buttons */
+.centered-actions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 0.5rem;
+	gap: 0.5rem;
+}
+
+/* Container spacing improvements */
+.container-fluid {
+	padding: 0 2rem;
+}
+
+.section-title {
+	margin-bottom: 2.5rem !important;
+}
+
+.row {
+	row-gap: 2rem;
+}
+
+/* ==========================================================================
+   6. Responsive Styles (Mobile First)
+   ========================================================================== */
+/* Base styles (mobile) */
+.container-fluid {
+	padding: 0 1rem;
+}
+
+.card {
+	width: 100%;
+	max-width: 380px;
+	margin: 20px auto;
+}
+
+.card-body {
+	padding: 1.25rem;
+}
+
+.card-text {
+	height: 150px;
+	overflow-y: auto;
+	font-size: medium;
+	margin-bottom: 1rem;
+}
+
+.distributor-table {
+	margin-bottom: 0;
+	width: 100%;
+	max-width: 100%;
+}
+
+.distributor-table td,
+.distributor-table th {
+	padding: 0.75rem;
+	vertical-align: middle;
+}
+
+.distributor-card {
+	width: 95%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.distributor-table td:nth-child(2) {
+	max-width: 300px;
+	white-space: normal;
+	word-wrap: break-word;
+}
+
+.section-title {
+	margin: 2rem 0 2.5rem !important;
+}
+
+.row {
+	row-gap: 1.5rem;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+	.distributor-table {
+		font-size: 0.875rem;
+	}
+
+	.distributor-table td,
+	.distributor-table th {
+		padding: 0.5rem;
+		white-space: normal;
+	}
+
+	.distributor-card .card-body {
+		padding: 0.75rem 0;
+	}
+}
+
+/* Mobile styles */
+@media (max-width: 576px) {
+	.distributor-table {
+		font-size: 0.8125rem;
+	}
+
+	.distributor-table td,
+	.distributor-table th {
+		padding: 0.4rem;
+	}
+
+	.distributor-card .card-body {
+		padding: 0.5rem 0;
+	}
+
+	.distributor-table td:nth-child(2) {
+		max-width: 120px;
+	}
+
+	.section-title {
+		font-size: 1.75rem;
+	}
+}
+
+/* ==========================================================================
+   7. Print Styles
+   ========================================================================== */
+@media print {
+	/* Hide interactive elements */
+	.btn-primary,
+	nav,
+	footer {
+		display: none !important;
+	}
+
+	/* Ensure proper page breaks */
+	.card {
+		break-inside: avoid;
+		page-break-inside: avoid;
+		border: 1px solid #ddd !important;
+	}
+
+	/* Remove scrolling text containers */
+	.card-text {
+		height: auto !important;
+		overflow: visible !important;
+		max-height: none !important;
+	}
+
+	/* Optimize for black and white printing */
+	* {
+		color: #000 !important;
+		background: transparent !important;
+		box-shadow: none !important;
+	}
+
+	/* Ensure full-width layout */
+	.container-fluid {
+		width: 100% !important;
+		padding: 0 !important;
+	}
+
+	/* Show URLs for links */
+	.card a[href]::after {
+		content: " (" attr(href) ")";
+		font-size: 0.9em;
+	}
+
+	/* Reset card image sizes for better print quality */
+	.card-img-wrapper {
+		height: auto !important;
+		max-height: 200px !important;
+	}
+
+	.card-img-top {
+		max-height: 180px !important;
+	}
+}
+
+/* Product hero responsive wrapper */
+.card-img-wrapper.product-hero {
+	padding: 1rem;
+	background: #fff;
+	margin: 0 auto;
+	display: block;
+	max-width: 700px;
+}
+
+.card-img-wrapper.product-hero img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: contain;
+}
+
+/* Product hero aspect ratios */
+.card-img-wrapper.product-hero.ar-4194-2600 {
+	aspect-ratio: 4194/2600;
+}
+
+.card-img-wrapper.product-hero.ar-4194-2599 {
+	aspect-ratio: 4194/2599;
+}
+
+.card-img-wrapper.product-hero.ar-3811-1743 {
+	aspect-ratio: 3811/1743;
+}
+
+.card-img-wrapper.product-hero.ar-1380-848 {
+	aspect-ratio: 1380/848;
 }

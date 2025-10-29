@@ -18,67 +18,50 @@
 			crossorigin="anonymous" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
 			rel="stylesheet" />
 		<link rel="stylesheet" href="style.css" />
+		<script defer src="/js/include.js"></script>
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-			<div class="container">
-				<a href="/index.html" class="navbar-brand">
-					<img
-						src="/logo.svg"
-						alt="logo"
-						class="d-inline-block align-top" />
-				</a>
-				<button
-					type="button"
-					class="navbar-toggler"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNav"
-					aria-controls="navbarNav"
-					aria-expanded="false"
-					aria-label="Expand Navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a href="./index.html" class="nav-link">Home</a>
-						</li>
-						<li class="nav-item">
-							<a
-								href="./products.html"
-								class="nav-link"
-								aria-current="page">
-								Products
-							</a>
-						</li>
-						<li class="nav-item">
-							<a
-								href="./about.html"
-								class="nav-link active"
-								aria-current="page"
-								>About Us</a
-							>
-						</li>
-					</ul>
-				</div>
-			</div>
+		<nav></nav>
+		<nav aria-label="Breadcrumb" class="container mt-5">
+			<ol class="breadcrumb bg-transparent p-0">
+				<li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">
+					About Us
+				</li>
+			</ol>
 		</nav>
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"name": "Home",
+						"item": "/index.html"
+					},
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"name": "About Us",
+						"item": "/about.html"
+					}
+				]
+			}
+		</script>
 		<br />
 		<div class="main-container">
 			<div class="container col-8">
 				<div class="row">
 					<div class="stack gap-3">
 						<div class="bg-light border p-3">
-							<div class="h1" style="text-align: center">
-								Our Vision
-							</div>
-							<p class="h5" style="text-align: center">
+							<div class="h1 text-center">Our Vision</div>
+							<p class="h5 text-center">
 								By providing specially designed products,
 								RudraXcell Lifecare Pvt. Ltd. is committed to
 								sustain a better quality of life in patients
@@ -87,10 +70,8 @@
 						</div>
 						<br />
 						<div class="bg-light border p-3">
-							<div class="h1" style="text-align: center">
-								Our Mission
-							</div>
-							<p class="h5" style="text-align: center">
+							<div class="h1 text-center">Our Mission</div>
+							<p class="h5 text-center">
 								To perform in an ethical manner with the right
 								spirit and endeavour to satisfy customer
 								expectations by keeping patient safety and
@@ -108,14 +89,15 @@
 					<div class="col-md-6">
 						<iframe
 							class="p-1"
+							title="Google Maps Location"
 							id="map"
 							src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3579.657371691513!2d91.73660027541538!3d26.207821777074372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDEyJzI4LjIiTiA5McKwNDQnMjEuMCJF!5e0!3m2!1sen!2sin!4v1747909574441!5m2!1sen!2sin"
-							style="border: 0"
 							width="100%"
 							height="100%"
 							allowfullscreen=""
 							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"></iframe>
+							referrerpolicy="strict-origin-when-cross-origin">
+						</iframe>
 					</div>
 					<div class="col-md-6">
 						<div class="row">
@@ -157,13 +139,7 @@
 			</div>
 			<br /><br />
 		</div>
-		<footer class="footer bg-light text-center">
-			<div
-				class="text-center p-3"
-				style="background-color: rgba(0, 0, 0, 0.2)">
-				© 2025 Copyright: RudraXcell LifeCare Pvt. Ltd. | rudraxcell.com
-			</div>
-		</footer>
+		<footer></footer>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

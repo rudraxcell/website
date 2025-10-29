@@ -1,0 +1,28 @@
+{
+  "states": [
+    {
+      "name": "Assam",
+      "distributors": [
+        { "name": "Modern Pharma Company", "address": "Panbazar", "city": "Guwahati", "phone": "7086057543" },
+        { "name": "Maheshwar Drug Distributor", "address": "Panbazar", "city": "Guwahati", "phone": "9435559765" },
+        { "name": "A.S.N. Associates", "address": "Zoo Road, Near State Zoo", "city": "Guwahati", "phone": "8453059142" },
+        { "name": "New J.P. Pharma", "address": "Panbazar", "city": "Guwahati", "phone": "6003552919" },
+        { "name": "C.P. Agency", "address": "Malowali", "city": "Jorhat", "phone": "9101015713" },
+        { "name": "Divine Drugs", "address": "Silchar", "city": "Silchar", "phone": "9435070851" },
+        { "name": "B.B. Enterprise", "address": "Bongaigaon", "city": "Bongaigaon", "phone": "9707186216" }
+      ]
+    },
+    {
+      "name": "Arunachal Pradesh",
+      "distributors": [
+        { "name": "Sanjivani Drugs", "address": "Naharlagun", "city": "Itanagar", "phone": "8131980903" }
+      ]
+    },
+    {
+      "name": "Nagaland",
+      "distributors": [
+        { "name": "Goodwill Drugs", "address": "Dimapur", "city": "Dimapur", "phone": "9971691833" }
+      ]
+    }
+  ]
+}
