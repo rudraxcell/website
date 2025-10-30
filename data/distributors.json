@@ -1,28 +1,96 @@
 {
-  "states": [
-    {
-      "name": "Assam",
-      "distributors": [
-        { "name": "Modern Pharma Company", "address": "Panbazar", "city": "Guwahati", "phone": "7086057543" },
-        { "name": "Maheshwar Drug Distributor", "address": "Panbazar", "city": "Guwahati", "phone": "9435559765" },
-        { "name": "A.S.N. Associates", "address": "Zoo Road, Near State Zoo", "city": "Guwahati", "phone": "8453059142" },
-        { "name": "New J.P. Pharma", "address": "Panbazar", "city": "Guwahati", "phone": "6003552919" },
-        { "name": "C.P. Agency", "address": "Malowali", "city": "Jorhat", "phone": "9101015713" },
-        { "name": "Divine Drugs", "address": "Silchar", "city": "Silchar", "phone": "9435070851" },
-        { "name": "B.B. Enterprise", "address": "Bongaigaon", "city": "Bongaigaon", "phone": "9707186216" }
-      ]
-    },
-    {
-      "name": "Arunachal Pradesh",
-      "distributors": [
-        { "name": "Sanjivani Drugs", "address": "Naharlagun", "city": "Itanagar", "phone": "8131980903" }
-      ]
-    },
-    {
-      "name": "Nagaland",
-      "distributors": [
-        { "name": "Goodwill Drugs", "address": "Dimapur", "city": "Dimapur", "phone": "9971691833" }
-      ]
-    }
-  ]
+	"states": [
+		{
+			"name": "Assam",
+			"distributors": [
+				{
+					"name": "Modern Pharma Company",
+					"address": "Panbazar",
+					"city": "Guwahati",
+					"phone": "70860 57543"
+				},
+				{
+					"name": "Maheshwar Drug Distributor",
+					"address": "Panbazar",
+					"city": "Guwahati",
+					"phone": "94355 59765"
+				},
+				{
+					"name": "A.S.N. Associates",
+					"address": "Zoo Road, Near State Zoo",
+					"city": "Guwahati",
+					"phone": "84530 59142"
+				},
+				{
+					"name": "New J.P. Pharma",
+					"address": "Panbazar",
+					"city": "Guwahati",
+					"phone": "60035 52919"
+				},
+				{
+					"name": "C.P. Agency",
+					"address": "Malowali",
+					"city": "Jorhat",
+					"phone": "91010 15713"
+				},
+				{
+					"name": "Divine Drugs",
+					"address": "Silchar",
+					"city": "Silchar",
+					"phone": "94350 70851"
+				},
+				{
+					"name": "B.B. Enterprise",
+					"address": "Bongaigaon",
+					"city": "Bongaigaon",
+					"phone": "97071 86216"
+				},
+				{
+					"name": "Sri Ganesh Distributor",
+					"address": "Nagaon",
+					"city": "Nagaon",
+					"phone": "78969 79517 | 60004 17145"
+				}
+			]
+		},
+		{
+			"name": "Arunachal Pradesh",
+			"distributors": [
+				{
+					"name": "Sanjivani Drugs",
+					"address": "Naharlagun",
+					"city": "Itanagar",
+					"phone": "81319 80903"
+				}
+			]
+		},
+		{
+			"name": "Nagaland",
+			"distributors": [
+				{
+					"name": "Goodwill Drugs",
+					"address": "Dimapur",
+					"city": "Dimapur",
+					"phone": "99716 91833"
+				}
+			]
+		},
+		{
+			"name": "Manipur",
+			"distributors": [
+				{
+					"name": "Mangal Medical Store",
+					"address": "Thangal Bazar",
+					"city": "Imphal",
+					"phone": "89741 36194"
+				},
+				{
+					"name": "Koraks Trades",
+					"address": "RIMS Road",
+					"city": "Imphal",
+					"phone": "98620 09688"
+				}
+			]
+		}
+	]
 }
