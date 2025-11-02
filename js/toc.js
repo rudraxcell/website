@@ -244,7 +244,27 @@
 					window.pageYOffset -
 					navOffset -
 					8; // small breathing room
+				// update URL hash without causing an instant browser jump
+				try {
+					if (history && history.replaceState) {
+						history.replaceState(null, "", "#" + id);
+					} else {
+						location.hash = "#" + id;
+					}
+				} catch (e) {
+					/* ignore */
+				}
 				window.scrollTo({ top: top, behavior: "smooth" });
+				// After the smooth scroll, ensure the heading isn't hidden under the navbar
+				setTimeout(function () {
+					const rect = el.getBoundingClientRect();
+					const desiredTop = navOffset + 125;
+					if (Math.abs(rect.top - desiredTop) > 2) {
+						const final =
+							window.pageYOffset + rect.top - desiredTop;
+						window.scrollTo({ top: final, behavior: "smooth" });
+					}
+				}, 260);
 				// update focus for accessibility
 				el.setAttribute("tabindex", "-1");
 				el.focus({ preventScroll: true });

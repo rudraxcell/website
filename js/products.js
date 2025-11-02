@@ -9,7 +9,7 @@
 		col.className = "col-sm-10 col-md-6 col-lg-4";
 
 		col.innerHTML = `
-			<div class="card h-100 shadow-sm">
+			<div class="card h-100 shadow-sm mb-4">
 				<div class="card-img-wrapper">
 					<img
 						src="${product.image}"
@@ -20,7 +20,7 @@
 				<div class="card-body d-flex flex-column">
 					<h5 class="card-title">${product.title}</h5>
 					<p class="card-text">${product.description}</p>
-					<a href="${product.link}" class="btn btn-primary mt-auto">Learn More</a>
+					<a href="${product.link}" class="btn btn-primary">Learn More</a>
 				</div>
 			</div>
 		`;
