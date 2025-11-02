@@ -6,12 +6,49 @@ async function loadHTML(selector, file) {
 		const response = await fetch(file);
 		if (!response.ok) throw new Error(`Failed to load ${file}`);
 		const html = await response.text();
-		container.innerHTML = html;
+
+		// Parse the fetched HTML so we can extract and run any scripts safely
+		const template = document.createElement("template");
+		template.innerHTML = html.trim();
+
+		// Extract script tags from the template content
+		const scripts = template.content.querySelectorAll("script");
+
+		// Remove script nodes from template content so they don't remain inert
+		scripts.forEach((s) => s.parentNode && s.parentNode.removeChild(s));
+
+		// Insert the non-script HTML into the container
+		container.innerHTML = "";
+		container.appendChild(template.content.cloneNode(true));
 
 		// After loading navbar, highlight active link
 		if (selector === "nav") {
 			setActiveNavLink();
 		}
+
+		// Now evaluate any extracted scripts by creating new script elements.
+		// External scripts will be appended to the document head to allow them to execute.
+		scripts.forEach((oldScript) => {
+			const script = document.createElement("script");
+			// copy attributes
+			for (let i = 0; i < oldScript.attributes.length; i++) {
+				const attr = oldScript.attributes[i];
+				script.setAttribute(attr.name, attr.value);
+			}
+			// copy inline code if present
+			if (
+				oldScript.textContent &&
+				oldScript.textContent.trim().length > 0
+			) {
+				script.textContent = oldScript.textContent;
+			}
+			// If the script has a src, append to head; otherwise append to container so execution order is preserved
+			if (script.src) {
+				document.head.appendChild(script);
+			} else {
+				container.appendChild(script);
+			}
+		});
 	} catch (err) {
 		console.error(err);
 	}

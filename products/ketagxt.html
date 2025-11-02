@@ -72,6 +72,34 @@
 			</ol>
 		</nav>
 
+		<!-- In-page table of contents for long product pages -->
+		<nav class="product-toc container my-3" aria-label="Product table of contents">
+				<details class="product-toc-details" aria-label="Product table of contents">
+					<summary class="toc-summary" aria-controls="toc-list" aria-expanded="false" role="button">
+						<span id="toc-summary-label" class="toc-label">Contents</span>
+						<span class="visually-hidden"> - jump to product sections</span>
+					</summary>
+					<div id="toc-list-wrapper" class="toc-list-wrapper" aria-hidden="true">
+						<ul id="toc-list" class="list-inline mb-0" aria-labelledby="toc-summary-label">
+							<li class="list-inline-item"><a href="#description">Description</a></li>
+							<li class="list-inline-item"><a href="#benefits">Benefits</a></li>
+							<li class="list-inline-item"><a href="#composition">Composition</a></li>
+							<li class="list-inline-item"><a href="#indications">Indications</a></li>
+							<li class="list-inline-item"><a href="#mechanism-of-action">Mechanism</a></li>
+							<li class="list-inline-item"><a href="#contraindications">Contraindications</a></li>
+							<li class="list-inline-item"><a href="#precautions-and-warnings">Precautions</a></li>
+							<li class="list-inline-item"><a href="#drug-interactions">Drug Interactions</a></li>
+							<li class="list-inline-item"><a href="#dosage-and-administration">Dosage</a></li>
+						</ul>
+					</div>
+				</details>
+
+				<!-- live region for screen readers to announce TOC state -->
+				<div id="toc-live" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+		</nav>
+
+		
+
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
@@ -99,9 +127,8 @@
 			}
 		</script>
 
-		<br />
 		<div class="main-container">
-			<div class="container py-10 my-5">
+			<section class="product-hero container py-10 my-5">
 				<div class="row align-items-center justify-content-center">
 					<div class="col-md-4 d-flex justify-content-center my-5">
 						<div
@@ -117,7 +144,7 @@
 								alt="KETAG XT product image" />
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center product-meta">
 						<h1 class="display-5">KETAG XT</h1>
 						<p class="text-muted mb-2">
 							By RudraXcell Lifecare Pvt. Ltd.
@@ -129,29 +156,15 @@
 						>
 					</div>
 				</div>
-				<br />
 				<hr />
 				<div class="row mt-5">
 					<div class="col-md-8 mx-auto">
-						<h2 class="h2">Description</h2>
-						<p class="lead">
-							KETAG XT is part of the conservative treatment of
-							patients with Chronic Kidney Disease. <br /><br />
-							KETAG XT contains amino acids, partly in form of
-							their corresponding-Ketoanalogues, essential for
-							patients with Chronic Kidney Disease. In combination
-							with a protein-restricted diet KETAG XT is an
-							excellent tool to treat Chronic Kidney Disease in
-							the pre-dialysis period with high pill burden.
-							<br /><br />It offers double strength of Alpha
-							Ketoanalogues ensures the intake of essential amino
-							acids and prevents deleterious consequences of
-							inadequate dietary protein intake by reducing pill
-							burden hence increasing patient compliance and
-							convenience.
-						</p>
-						<h3>Benefits</h3>
-						<ul>
+						<h2 id="description" class="h2">Description</h2>
+						<p class="lead">KETAG XT is part of the conservative treatment of patients with Chronic Kidney Disease.</p>
+						<p>KETAG XT contains amino acids, partly in form of their corresponding-Ketoanalogues, essential for patients with Chronic Kidney Disease. In combination with a protein-restricted diet KETAG XT is an excellent tool to treat Chronic Kidney Disease in the pre-dialysis period with high pill burden.</p>
+						<p>It offers double strength of Alpha Ketoanalogues ensures the intake of essential amino acids and prevents deleterious consequences of inadequate dietary protein intake by reducing pill burden hence increasing patient compliance and convenience.</p>
+						<h3 id="benefits">Benefits</h3>
+						<ul class="composition-list">
 							<li>
 								Reduction of uremic symptoms, which are largely
 								due to an accumulation of degradation products
@@ -174,7 +187,7 @@
 								and lipid metabolism)
 							</li>
 						</ul>
-						<h3>Composition</h3>
+						<h3 id="composition">Composition</h3>
 						<p>One film coated tablet contains:</p>
 						<ul>
 							<li>
@@ -207,12 +220,12 @@
 							<li>L-histidine U.S.P 76 mg</li>
 							<li>L-tyrosine U.S.P 60 mg</li>
 						</ul>
-						<h3>Indications</h3>
+						<h3 id="indications">Indications</h3>
 						<p>
 							Prevention & therapy of damages due to CKD till GFR
 							is 15 ml/min, i.e. stages II, III & IV of CKD
 						</p>
-						<h3>Mechanism of Action</h3>
+						<h3 id="mechanism-of-action">Mechanism of Action</h3>
 						<p>
 							On absorption alpha Ketoanalogue get converted to
 							their respective amines by taking up the Nitrogen
@@ -220,14 +233,14 @@
 							nitrogenous waste load on the kidneys and fulfilling
 							the nutritional requirement.
 						</p>
-						<h3>Contraindications</h3>
+						<h3 id="contraindications">Contraindications</h3>
 						<p>
 							Hypercalcaemia, disturbed amino acid metabolism. In
 							case of hereditary phenylketonurie it has to be
 							taken into account that this product contains
 							phenylalanine.
 						</p>
-						<h3>Precautions and Warnings</h3>
+						<h3 id="precautions-and-warnings">Precautions and Warnings</h3>
 						<p>
 							No experience has been made so far with the
 							application in pregnancy and pediatrics. Ketag XT
@@ -237,14 +250,14 @@
 							monitored regularly. An adequate supply of calories
 							should be ensured.
 						</p>
-						<h3>Undesirable effects</h3>
+						<h3 id="undesirable-effects">Undesirable effects</h3>
 						<p>
 							Hypercalcemia may develop. In this case, it is
 							recommended to decrease vitamin D intake. If the
 							hypercalcaemia persists, reduce the dosage of
 							Kestead XT as well as any other source of calcium.
 						</p>
-						<h3>Drug Interactions</h3>
+						<h3 id="drug-interactions">Drug Interactions</h3>
 						<p>
 							Simultaneous administration of medicinal products
 							that contain calcium (e.g. acetolyte) may trigger,
@@ -274,164 +287,35 @@
 							(cardiac glycosides) and thus also the risk of
 							cardiac arrhythmia is increased.
 						</p>
-						<h3>Dosage Form</h3>
+						<h3 id="dosage-form">Dosage Form</h3>
 						<p>Oral Tablet</p>
-						<h3>Dosage and Administration</h3>
+						<h3 id="dosage-and-administration">Dosage and Administration</h3>
 						<p>
 							1 Tablet/10 kg body weight/day along with meal,
 							divided in 3 equal dosage
 						</p>
-						<h3>Storage</h3>
+						<h3 id="storage">Storage</h3>
 						<p>
-							Do not use Ketag XT after expiry date Keep out of
-							the reach of children Do not store above 25°C
-							Protect from moisture
+							Do not use Ketag XT after expiry date. Keep out of
+							the reach of children. Do not store above 25°C.
+							Protect from moisture.
 						</p>
-						<h3>Presentation</h3>
+						<h3 id="presentation">Presentation</h3>
 						<p>
 							10 tablets packed in a strip, 5 such strips packed
 							in a carton
 						</p>
 					</div>
 				</div>
-
 				<hr class="my-5" />
-				<h2 class="mb-4">Related Products</h2>
-				<div class="row row-cols-1 row-cols-md-4 g-4">
-					<div class="col-md-3">
-						<div class="card">
-							<img
-								src="/images/1.png"
-								loading="lazy"
-								class="card-img-top"
-								alt="RenoXcell" />
-							<div class="card-body">
-								<h5 class="card-title">RenoXcell</h5>
-								<div class="card-text related-product-card">
-									RenoXcell is a combination of
-									N-Acetylcysteine and Taurine that acts
-									synergistically to attenuate glomerular
-									damage and microalbuminaria in diabetic
-									kidney disease patients.
-								</div>
-								<a
-									href="/products/renoxcell.html"
-									class="btn btn-primary"
-									>View Details</a
-								>
-							</div>
-						</div>
+				<section aria-labelledby="related-products-heading">
+					<h2 id="related-products-heading" class="mb-4">Related Products</h2>
+					<div class="related-products" data-related='["/products/renoxcell.html","/products/probitrust15.html","/products/probitrust45.html","/products/phosclog400.html"]'>
+						<!-- Related products will be loaded here by /js/related-products.js -->
 					</div>
-					<div class="col-md-3">
-						<div class="card">
-							<img
-								src="/images/4.png"
-								loading="lazy"
-								class="card-img-top"
-								alt="ProbiTrust 15" />
-							<div class="card-body">
-								<h5 class="card-title">ProbiTrust 15</h5>
-								<div class="card-text related-product-card">
-									Prebiotics and probiotics help improve gut
-									health in people with chronic kidney disease
-									(CKD). Prebiotics are a type of fiber that
-									feed healthy gut bacteria, while probiotics
-									are live microorganisms that can help the
-									body by:
-									<ul>
-										<li>
-											Restoring the balance between good
-											and bad bacteria in the gut.
-										</li>
-										<li>
-											Reducing the production of harmful
-											toxins in the gut.
-										</li>
-										<li>Improving immune function.</li>
-									</ul>
-
-									ProbiTrust 15 contains a total of 15 billion
-									spores to support gut health effectively.
-								</div>
-								<a
-									href="/products/probitrust15.html"
-									class="btn btn-primary"
-									>View Details</a
-								>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card">
-							<img
-								src="/images/2.png"
-								loading="lazy"
-								class="card-img-top"
-								alt="ProbiTrust 45" />
-							<div class="card-body">
-								<h5 class="card-title">ProbiTrust 45</h5>
-								<div class="card-text related-product-card">
-									Prebiotics and probiotics help improve gut
-									health in people with chronic kidney disease
-									(CKD). Prebiotics are a type of fiber that
-									feed healthy gut bacteria, while probiotics
-									are live microorganisms that can help the
-									body by:
-									<ul>
-										<li>
-											Restoring the balance between good
-											and bad bacteria in the gut.
-										</li>
-										<li>
-											Reducing the production of harmful
-											toxins in the gut.
-										</li>
-										<li>Improving immune function.</li>
-									</ul>
-
-									ProbiTrust 45 contains a total of 45 billion
-									spores to support gut health effectively.
-								</div>
-								<a
-									href="/products/probitrust45.html"
-									class="btn btn-primary"
-									>View Details</a
-								>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card">
-							<img
-								src="/images/Phosclog-400.jpg"
-								loading="lazy"
-								class="card-img-top"
-								alt="Phosclog 400" />
-							<div class="card-body">
-								<h5 class="card-title">Phosclog 400</h5>
-								<div class="card-text related-product-card">
-									Phosclog (Sevelamer Carbonate) is a
-									polymeric phosphate binder which is used to
-									manage high blood phosphate levels
-									(hyperphosphatemia) in patients with CKD.
-									<br />
-									It also plays a crucial role in maintaining
-									strong bones & reducing harmful mineral
-									accumulation in the body. Additionally, it
-									helps in reducing the risk of heart disease
-									and stroke.
-								</div>
-								<a
-									href="/products/phosclog400.html"
-									class="btn btn-primary"
-									>View Details</a
-								>
-							</div>
-						</div>
-					</div>
-				</div>
+				</section>
+			</section>
 			</div>
-			<br /><br />
 		</div>
 		<footer></footer>
 		<script

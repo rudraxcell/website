@@ -72,6 +72,44 @@
 			</ol>
 		</nav>
 
+		<!-- In-page table of contents for long product pages -->
+		<nav
+			class="product-toc container my-3"
+			aria-label="Product table of contents">
+			<details
+				class="product-toc-details"
+				aria-label="Product table of contents">
+				<summary
+					class="toc-summary"
+					aria-controls="toc-list"
+					aria-expanded="false"
+					role="button">
+					<span id="toc-summary-label" class="toc-label"
+						>Contents</span
+					>
+					<span class="visually-hidden">
+						- jump to product sections</span
+					>
+				</summary>
+				<div
+					id="toc-list-wrapper"
+					class="toc-list-wrapper"
+					aria-hidden="true">
+					<ul
+						id="toc-list"
+						class="list-inline mb-0"
+						aria-labelledby="toc-summary-label"></ul>
+				</div>
+			</details>
+
+			<!-- live region for screen readers to announce TOC state -->
+			<div
+				id="toc-live"
+				class="visually-hidden"
+				aria-live="polite"
+				aria-atomic="true"></div>
+		</nav>
+
 		<script type="application/ld+json">
 			{
 				"@context": "https://schema.org",
@@ -116,7 +154,7 @@
 								alt="ProbiTrust 15 Product Image" />
 						</div>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center product-meta">
 						<h1 class="display-5">ProbiTrust 15</h1>
 						<p class="text-muted">
 							By RudraXcell Lifecare Pvt. Ltd.
@@ -148,8 +186,8 @@
 							Probiotics are used to eliminate uremic toxics in
 							CKD patients and in patients undergoing dialysis.
 						</p>
-						<h3>Composition</h3>
-						<ul>
+						<h3 id="composition">Composition</h3>
+						<ul class="composition-list">
 							<li>Bifidobacterium longum: 5 Billion CFU</li>
 							<li>Lactobacillus acidophilus: 5 Billion CFU</li>
 							<li>Streptococcus thermophilus: 5 Billion CFU</li>
@@ -244,7 +282,7 @@
 							probiotic populations during and after an antibiotic
 							course.
 						</p>
-						<h3>Presentation</h3>
+						<h3 id="presentation">Presentation</h3>
 						<p>
 							10 capsules packed in a strip, 5 such strips packed
 							in a carton.
@@ -252,128 +290,14 @@
 					</div>
 				</div>
 				<hr class="my-5" />
-				<h2 class="mb-4">Related Products</h2>
-				<div class="row row-cols-1 row-cols-md-4 g-4">
-					<div class="col-md-3">
-						<div class="card">
-							<img
-								src="/images/1.png"
-								loading="lazy"
-								class="card-img-top"
-								alt="RenoXcell" />
-							<div class="card-body">
-								<h5 class="card-title">RenoXcell</h5>
-								<div class="card-text related-product-card">
-									RenoXcell is a combination of
-									N-Acetylcysteine and Taurine that acts
-									synergistically to attenuate glomerular
-									damage and microalbuminaria in diabetic
-									kidney disease patients.
-								</div>
-								<a
-									href="/products/renoxcell.html"
-									class="btn btn-primary"
-									>View Details</a
-								>
-							</div>
-						</div>
+				<section aria-labelledby="related-products-heading">
+					<h2 id="related-products-heading" class="mb-4">
+						Related Products
+					</h2>
+					<div class="related-products">
+						<!-- Related products will be loaded here by /js/related-products.js -->
 					</div>
-					<div class="col-md-3">
-						<div class="card">
-							<img
-								src="/images/2.png"
-								loading="lazy"
-								class="card-img-top"
-								alt="ProbiTrust 45" />
-							<div class="card-body">
-								<h5 class="card-title">ProbiTrust 45</h5>
-								<div class="card-text related-product-card">
-									Prebiotics and probiotics help improve gut
-									health in people with chronic kidney disease
-									(CKD). Prebiotics are a type of fiber that
-									feed healthy gut bacteria, while probiotics
-									are live microorganisms that can help the
-									body by:
-									<ul>
-										<li>
-											Restoring the balance between good
-											and bad bacteria in the gut.
-										</li>
-										<li>
-											Reducing the production of harmful
-											toxins in the gut.
-										</li>
-										<li>Improving immune function.</li>
-									</ul>
-
-									ProbiTrust 45 contains a total of 45 billion
-									spores to support gut health effectively.
-								</div>
-								<a
-									href="/products/probitrust45.html"
-									class="btn btn-primary"
-									>View Details</a
-								>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card">
-							<img
-								src="/images/Phosclog-400.jpg"
-								loading="lazy"
-								class="card-img-top"
-								alt="Phosclog 400" />
-							<div class="card-body">
-								<h5 class="card-title">Phosclog 400</h5>
-								<div class="card-text related-product-card">
-									Phosclog (Sevelamer Carbonate) is a
-									polymeric phosphate binder which is used to
-									manage high blood phosphate levels
-									(hyperphosphatemia) in patients with CKD.
-									<br />
-									It also plays a crucial role in maintaining
-									strong bones & reducing harmful mineral
-									accumulation in the body. Additionally, it
-									helps in reducing the risk of heart disease
-									and stroke.
-								</div>
-								<a
-									href="/products/phosclog400.html"
-									class="btn btn-primary"
-									>View Details</a
-								>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="card">
-							<img
-								src="/images/3.png"
-								loading="lazy"
-								class="card-img-top"
-								alt="Ketag XT" />
-							<div class="card-body">
-								<h5 class="card-title">Ketag XT</h5>
-								<div class="card-text related-product-card">
-									Alpha Ketoanalogue is used in the treatment
-									of chronic kidney disease. Alpha
-									Ketoanalogue belongs to a class of drugs
-									called nutritional supplements. It follows
-									same catabolic pathways as amino acids and
-									works by improving the metabolism of protein
-									in the body, thereby improving the renal
-									function.
-								</div>
-								<a
-									href="/products/ketagxt.html"
-									class="btn btn-primary"
-									>View Details</a
-								>
-							</div>
-						</div>
-					</div>
-				</div>
+				</section>
 			</div>
 			<br /><br />
 		</div>
