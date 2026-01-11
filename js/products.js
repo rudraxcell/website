@@ -1,9 +1,6 @@
 (function () {
 	"use strict";
 
-	// ----------------------------
-	// Create Bootstrap Product Card
-	// ----------------------------
 	function createProductCard(product) {
 		const col = document.createElement("div");
 		col.className = "col-sm-10 col-md-6 col-lg-4";
@@ -27,9 +24,6 @@
 		return col;
 	}
 
-	// ----------------------------
-	// JSON-LD Generator for SEO
-	// ----------------------------
 	function toJsonLd(products) {
 		const graph = products.map((p) => ({
 			"@type": "Product",
@@ -49,9 +43,6 @@
 		};
 	}
 
-	// ----------------------------
-	// Render Products
-	// ----------------------------
 	function render(products) {
 		const container = document.getElementById("product-list");
 		if (!container) return;
@@ -80,9 +71,6 @@
 		}
 	}
 
-	// ----------------------------
-	// UI Helpers
-	// ----------------------------
 	function showLoading(container) {
 		container.innerHTML = "";
 		const wrap = document.createElement("div");
@@ -141,9 +129,6 @@
 		container.appendChild(actions);
 	}
 
-	// ----------------------------
-	// Initialization
-	// ----------------------------
 	document.addEventListener("DOMContentLoaded", function () {
 		const url = "/data/products.json";
 		const container = document.getElementById("product-list");

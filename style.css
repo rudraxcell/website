@@ -1,9 +1,6 @@
-/* ==========================================================================
-   1. Reset & Base Styles
-   ========================================================================== */
 * {
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+	font-family: Poppins, sans-serif;
 }
 
 html,
@@ -21,15 +18,19 @@ p {
 
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: var(--nav-offset);
 }
 
 body {
 	min-height: 100%;
-	padding-top: 76px; /* Account for fixed navbar */
+	padding-top: 76px;
+	line-height: 1.6;
+	color: #222;
 }
 
 .breadcrumb {
 	margin: 1rem 0;
+	font-size: 0.8rem;
 }
 
 a {
@@ -37,28 +38,27 @@ a {
 	color: inherit;
 }
 
-/* ==========================================================================
-   2. Navigation & Header
-   ========================================================================== */
+img {
+	width: 300px;
+	margin: 0 auto;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
 .navbar-brand img {
 	width: 150px;
 	margin-block: 5px;
 }
 
-/* ==========================================================================
-   3. Layout & Container
-   ========================================================================== */
 .main-container {
 	margin-top: 2rem;
 	padding-bottom: 2rem;
 }
 
-/* ==========================================================================
-   4. Hero Section
-   ========================================================================== */
 #hero {
 	text-align: center;
-	aspect-ratio: 4/3;
 	max-width: 1000px;
 	align-items: center;
 	flex-direction: column;
@@ -69,12 +69,14 @@ a {
 	background-position: center;
 	aspect-ratio: auto;
 	min-height: 60vh;
+
 	/* contain: layout style paint; */
 }
 
 #hero h1 {
 	font-size: clamp(1.75rem, 4vw, 3rem);
 }
+
 #hero p {
 	font-size: clamp(0.9rem, 2vw, 1.25rem);
 	max-width: 800px;
@@ -96,13 +98,13 @@ a {
 }
 
 .active-btn {
-	background-color: #33ccff;
+	background-color: #3cf;
 	padding: 4px 12px;
 	border-radius: 25px;
 }
 
 .inactive-btn {
-	border-color: #33ccff;
+	border-color: #3cf;
 	border-style: solid;
 	padding: 4px 12px;
 	border-radius: 25px;
@@ -110,11 +112,6 @@ a {
 
 .inactive-btn:hover {
 	border-color: white;
-}
-
-img {
-	width: 300px;
-	margin: 0 auto;
 }
 
 /* Product card image container */
@@ -136,7 +133,7 @@ img {
 
 .card {
 	width: 100%;
-	max-width: 350px;
+	max-width: 380px;
 	margin: 1.5rem auto;
 	animation: fadeIn 0.5s ease-in;
 	height: 100%;
@@ -195,12 +192,9 @@ footer {
 }
 
 .footer-background {
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgb(0 0 0 / 20%);
 }
 
-/* ==========================================================================
-   5. Buttons & Interactive Elements
-   ========================================================================== */
 .btn-primary {
 	padding: 0.75rem 1.5rem;
 	display: inline-block;
@@ -214,7 +208,7 @@ footer {
 
 .btn-primary:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
 }
 
 .btn-primary:focus-visible {
@@ -227,6 +221,7 @@ footer {
 		transition: none;
 		transform: none;
 	}
+
 	.btn-primary:hover {
 		transform: none;
 	}
@@ -235,10 +230,15 @@ footer {
 .related-product-card {
 	height: 100px;
 	font-size: small;
+	max-height: 110px;
+	overflow-y: auto;
+	padding-right: 0.25rem;
 }
 
 .distributor-table {
 	margin-bottom: 0;
+	width: 100%;
+	max-width: 100%;
 }
 
 .distributor-table td,
@@ -250,18 +250,22 @@ footer {
 .distributor-table td:nth-child(2) {
 	max-width: 200px;
 	white-space: normal;
-	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .distributor-card {
-	animation: fadeIn 0.5s ease-in;
+	animation: fade-in 0.5s ease-in;
+	width: 95%;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
 	from {
 		opacity: 0;
 		transform: translateY(10px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0);
@@ -306,77 +310,21 @@ footer {
 }
 
 /* Container spacing improvements */
-.container-fluid {
-	padding: 0 2rem;
-}
-
-.section-title {
-	margin-bottom: 2.5rem !important;
-}
-
-.row {
-	row-gap: 2rem;
-}
-
-/* ==========================================================================
-   6. Responsive Styles (Mobile First)
-   ========================================================================== */
-/* Base styles (mobile) */
-.container-fluid {
-	padding: 0 1rem;
-}
-
-.card {
-	width: 100%;
-	max-width: 380px;
-	margin: 20px auto;
-}
-
-.card-body {
-	padding: 1.25rem;
-}
-
-.card-text {
-	height: 150px;
-	overflow-y: auto;
-	font-size: medium;
-	margin-bottom: 1rem;
-}
-
-.distributor-table {
-	margin-bottom: 0;
-	width: 100%;
-	max-width: 100%;
-}
-
-.distributor-table td,
-.distributor-table th {
-	padding: 0.75rem;
-	vertical-align: middle;
-}
-
-.distributor-card {
-	width: 95%;
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
-.distributor-table td:nth-child(2) {
-	max-width: 300px;
-	white-space: normal;
-	word-wrap: break-word;
-}
 
 .section-title {
 	margin: 2rem 0 2.5rem !important;
 }
 
 .row {
-	row-gap: 1.5rem;
+	row-gap: 2rem;
+}
+
+.container-fluid {
+	padding: 0 1rem;
 }
 
 /* Tablet styles */
-@media (max-width: 768px) {
+@media (width <= 768px) {
 	.distributor-table {
 		font-size: 0.875rem;
 	}
@@ -393,7 +341,7 @@ footer {
 }
 
 /* Mobile styles */
-@media (max-width: 576px) {
+@media (width <= 576px) {
 	.distributor-table {
 		font-size: 0.8125rem;
 	}
@@ -430,7 +378,6 @@ footer {
 	/* Ensure proper page breaks */
 	.card {
 		break-inside: avoid;
-		page-break-inside: avoid;
 		border: 1px solid #ddd !important;
 	}
 
@@ -508,12 +455,6 @@ footer {
    Product page - readability & layout tweaks (non-destructive to images)
    ========================================================================== */
 
-/* Improve overall reading rhythm */
-body {
-	line-height: 1.6;
-	color: #222;
-}
-
 /* Stronger, consistent H1 */
 h1.display-5 {
 	font-weight: 700;
@@ -544,11 +485,12 @@ h3 {
 }
 
 /* Composition list: two columns on wider screens for easier scanning */
-@media (min-width: 768px) {
+@media (width >= 768px) {
 	.composition-list {
 		column-count: 2;
 		column-gap: 2rem;
 	}
+
 	.composition-list li {
 		break-inside: avoid;
 		margin-bottom: 0.6rem;
@@ -571,25 +513,13 @@ h3 {
 	min-width: 180px;
 }
 
-/* Ensure paragraphs have consistent spacing instead of relying on <br/> */
-p {
-	margin-bottom: 1rem;
-}
-
-/* Breadcrumb small sizing tweak */
-.breadcrumb {
-	font-size: 0.95rem;
-}
-
 /* Fix anchor jump offset for fixed navbar
    Uses the existing navbar height (76px) to ensure in-page links
    scroll to a visible position below the fixed header. */
 :root {
 	--nav-offset: 76px;
 }
-html {
-	scroll-padding-top: var(--nav-offset);
-}
+
 /* Applies an extra small offset to headings with ids so they appear below the navbar */
 h1[id],
 h2[id],
@@ -603,7 +533,12 @@ h4[id] {
 	background: #f8f9fa;
 	padding: 0.5rem 0.75rem;
 	border-radius: 0.5rem;
+	position: sticky;
+	top: calc(var(--nav-offset) + 30px);
+	z-index: 1050; /* above content but below any modal/backdrops */
+	box-shadow: 0 6px 18px rgb(16 24 40 / 4%);
 }
+
 /* Layout: make the TOC items distribute with space-around */
 .product-toc .list-inline {
 	display: flex;
@@ -614,6 +549,7 @@ h4[id] {
 	padding-left: 0;
 	margin: 0;
 }
+
 .product-toc .product-toc-details > summary.toc-summary {
 	list-style: none;
 	display: inline-flex;
@@ -626,6 +562,7 @@ h4[id] {
 	> summary.toc-summary::-webkit-details-marker {
 	display: none;
 }
+
 .product-toc .product-toc-details > summary.toc-summary::after {
 	/* chevron */
 	content: "\25BE";
@@ -635,13 +572,14 @@ h4[id] {
 	font-size: 0.9em;
 	color: #0d6efd;
 }
+
 .product-toc .product-toc-details[open] > summary.toc-summary::after {
 	transform: rotate(180deg);
 }
 
 /* On desktop keep the summary visible so users can collapse/expand the TOC.
    The JS will collapse the list by default and show a short preview. */
-@media (min-width: 577px) {
+@media (width >= 577px) {
 	.product-toc .product-toc-details > summary.toc-summary {
 		display: inline-flex;
 		align-items: center;
@@ -670,16 +608,18 @@ h4[id] {
 
 /* Active section highlight in TOC */
 .product-toc a.is-active {
-	background: rgba(13, 110, 253, 0.08);
+	background: rgb(13 110 253 / 8%);
 	padding: 0.2rem 0.4rem;
 	border-radius: 4px;
 	color: #0b5ed7;
 }
+
 /* Mobile: collapse wrapper by default; the JS will control exact max-height for smooth animations */
-@media (max-width: 576px) {
+@media (width <= 576px) {
 	.toc-list-wrapper {
 		max-height: 0;
 	}
+
 	.product-toc .product-toc-details[open] .toc-list-wrapper {
 		max-height: 360px;
 	}
@@ -691,44 +631,40 @@ h4[id] {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(1px);
 	white-space: nowrap;
 	border: 0;
 	padding: 0;
 	margin: -1px;
 }
+
 .product-toc .list-inline-item {
 	margin-right: 0;
 }
+
 .product-toc a {
 	color: #0d6efd;
 	font-weight: 500;
 }
+
 .product-toc a:hover {
 	text-decoration: underline;
 }
 
-/* Make the TOC stick below the fixed navbar when scrolling */
-.product-toc {
-	position: sticky;
-	/* add a slightly larger gap between navbar and TOC to avoid overlap */
-	top: calc(var(--nav-offset) + 30px);
-	z-index: 1050; /* above content but below any modal/backdrops */
-	box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
-}
-
 /* Responsive: on small screens keep TOC compact by enabling horizontal scroll
    so links remain readable without wrapping into many rows. */
-@media (max-width: 576px) {
+@media (width <= 576px) {
 	.product-toc {
 		padding: 0.25rem 0.5rem;
 		border-radius: 0.35rem;
 	}
+
 	/* Use details/summary pattern: keep summary visible and make the list horizontally scrollable
 	   so the TOC takes minimal vertical space by default. */
 	.product-toc .product-toc-details {
 		width: 100%;
 	}
+
 	.product-toc .product-toc-details > summary.toc-summary {
 		display: inline-block;
 		cursor: pointer;
@@ -739,43 +675,39 @@ h4[id] {
 		margin-right: 0.5rem;
 		color: #0d6efd;
 	}
+
 	.product-toc .product-toc-details > ul.list-inline {
 		display: inline-flex;
 		justify-content: flex-start;
 		overflow-x: auto;
 		gap: 0.5rem;
 		white-space: nowrap;
-		padding: 0.25rem 0 0 0;
+		padding: 0.25rem 0 0;
+
 		/* mobile smooth scrolling handled by browser; vendor-prefixed rule removed */
 	}
+
 	.product-toc .list-inline-item {
 		flex: 0 0 auto;
 		margin-right: 0.5rem;
 	}
+
 	.product-toc a {
 		font-size: 0.92rem;
 	}
 }
 
-/* Make related product cards expand to fit content and reduce nested list size */
-.related-product-card {
-	/* Limit vertical size so related product cards remain compact.
-	   Reduce height and body padding to keep cards visually shorter.
-	*/
-	max-height: 110px;
-	overflow-y: auto;
-	font-size: 0.95rem;
-	padding-right: 0.25rem;
-}
 .related-product-card ul {
 	margin: 0.35rem 0 0 1rem;
 	padding-left: 1rem;
 	font-size: 0.9rem;
 }
+
 /* Keep scrollbar subtle but usable on related product descriptions */
 .related-product-card::-webkit-scrollbar {
 	width: 6px;
 }
+
 .related-product-card::-webkit-scrollbar-track {
 	background: transparent;
 }
@@ -787,6 +719,7 @@ h4[id] {
 	height: auto;
 	object-fit: contain;
 }
+
 .related-products .card-body {
 	/* slightly reduce padding inside related product cards and use
      column flex layout so the CTA can be stretched without being
@@ -795,6 +728,7 @@ h4[id] {
      space from the border. */
 	display: flex;
 	flex-direction: column;
+
 	/* smaller overall padding so CTA is closer to the bottom */
 	padding: 0.4rem;
 	gap: 0.25rem;
@@ -806,10 +740,12 @@ h4[id] {
 .related-products .card {
 	height: auto;
 }
-@media (max-width: 576px) {
+
+@media (width <= 576px) {
 	.related-products .card-img-top {
 		max-height: 90px;
 	}
+
 	.related-products .related-product-card {
 		max-height: 90px;
 	}
@@ -819,6 +755,7 @@ h4[id] {
 .related-products .rp-spinner {
 	padding: 0.75rem 0;
 }
+
 .related-products .rp-spinner .spinner-border {
 	width: 1.6rem;
 	height: 1.6rem;
@@ -846,13 +783,16 @@ h4[id] {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
+
 	/* keep a small gap from the card bottom */
-	margin: 0 0 0.25rem 0;
+	margin: 0 0 0.25rem;
 }
+
 .related-product-card::-webkit-scrollbar-thumb {
 	background: #cbd5e0;
 	border-radius: 6px;
 }
+
 .related-product-card::-webkit-scrollbar-thumb:hover {
 	background: #a0aec0;
 }

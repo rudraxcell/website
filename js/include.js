@@ -7,17 +7,13 @@ async function loadHTML(selector, file) {
 		if (!response.ok) throw new Error(`Failed to load ${file}`);
 		const html = await response.text();
 
-		// Parse the fetched HTML so we can extract and run any scripts safely
 		const template = document.createElement("template");
 		template.innerHTML = html.trim();
 
-		// Extract script tags from the template content
 		const scripts = template.content.querySelectorAll("script");
 
-		// Remove script nodes from template content so they don't remain inert
 		scripts.forEach((s) => s.parentNode && s.parentNode.removeChild(s));
 
-		// Insert the non-script HTML into the container
 		container.innerHTML = "";
 		container.appendChild(template.content.cloneNode(true));
 

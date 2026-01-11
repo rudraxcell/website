@@ -33,5 +33,19 @@
 		"alt": "Phosclog 400 product image",
 		"description": "Phosclog (Sevelamer Carbonate) is a polymeric phosphate binder which is used to manage high blood phosphate levels (hyperphosphatemia) in patients with CKD. <br /> <br /> It also plays a crucial role in maintaining strong bones & reducing harmful mineral accumulation in the body. <br /> <br /> It also helps in reducing the risk of heart disease and stroke.",
 		"link": "/products/phosclog400.html"
+	},
+	{
+		"title": "NEFICAP",
+		"image": "/images/neficap.jpg",
+		"alt": "Neficap product image",
+		"description": "NEFICAP is a multi-vitamins formulation specifically designed to suit the nutritional needs of patients of kidney disease and/or on dialysis treatment, as regular multi-vitamins are not suitable for such patients.",
+		"link": "/products/neficap.html"
+	},
+	{
+		"title": "FERINEF",
+		"image": "/images/ferinef.jpg",
+		"alt": "FERINEF product image",
+		"description": "FERINEF Tablet is a dietary supplement containing iron that increases haemoglobin levels in the blood and supports red blood cell production. The tablet also supports oxygen transportation in the blood for metabolism and cell growth.",
+		"link": "/products/ferinef.html"
 	}
 ]
