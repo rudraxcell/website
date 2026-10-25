@@ -57,9 +57,8 @@
 			const ld = toJsonLd(products);
 			const ldScriptId = "products-jsonld";
 			const existing = document.getElementById(ldScriptId);
-			if (existing) {
-				existing.text = JSON.stringify(ld);
-			} else {
+			if (!existing) {
+				const ld = toJsonLd(products);
 				const script = document.createElement("script");
 				script.type = "application/ld+json";
 				script.id = ldScriptId;
@@ -150,11 +149,7 @@
 				})
 				.catch((err) => {
 					console.warn("Could not load products.json", err);
-					showError(
-						container,
-						"Could not load product data. Please try again.",
-						doFetch
-					);
+					showError(container, "Could not load product data. Please try again.", doFetch);
 				});
 		}
 

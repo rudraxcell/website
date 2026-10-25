@@ -26,16 +26,23 @@ for state in states:
     summary.append((state_name, len(distributors)))
 
     for d in distributors:
+        raw_phone = d.get("phone", "")
+        if "|" in raw_phone:
+            telephone = [p.strip() for p in raw_phone.split("|") if p.strip()]
+        else:
+            telephone = raw_phone.strip()
+
         graph.append(
             {
                 "@type": "LocalBusiness",
                 "name": d.get("name"),
-                "telephone": d.get("phone"),
+                "telephone": telephone,
                 "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": d.get("address"),
-                    "addressLocality": d.get("city"),
+                    "streetAddress": d.get("address", ""),
+                    "addressLocality": d.get("city", ""),
                     "addressRegion": state_name,
+                    "addressCountry": "IN",
                 },
                 "areaServed": state_name,
             }
@@ -52,7 +59,7 @@ except Exception as e:
 # === PREPARE NEW JSON-LD BLOCK ===
 new_jsonld_block = (
     '<script id="distributors-jsonld" type="application/ld+json">\n'
-    + json.dumps(schema, indent=4)
+    + json.dumps(schema, indent=4, ensure_ascii=False)
     + "\n</script>"
 )
 
@@ -76,8 +83,8 @@ print("\n✅ JSON-LD updated successfully!\n")
 print(f"📦 Total distributors: {len(graph)} across {len(states)} states.\n")
 print("📊 Summary by state:")
 print("-" * 45)
-for state_name, count in summary:
-    print(f"{state_name:<25} {count:>3} distributors")
+for state_name, dist_count in summary:
+    print(f"{state_name:<25} {dist_count:>3} distributors")
 print("-" * 45)
 print()
 

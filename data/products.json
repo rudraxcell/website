@@ -1,5 +1,19 @@
 [
 	{
+		"title": "RenoXcell",
+		"image": "/images/1.png",
+		"alt": "RenoXcell product image",
+		"description": "N-Acetylcysteine and Taurine work by slowing down the process of kidney cell damage and improving kidney function. These tablets are particularly beneficial in preventing the progression of microalbuminuria (the presence of small amounts of albumin in the urine) in patients with kidney disease.",
+		"link": "/products/renoxcell.html"
+	},
+	{
+		"title": "KETAG XT",
+		"image": "/images/3.png",
+		"alt": "KETAG XT product image",
+		"description": "Alpha Ketoanalogue is used in the treatment of chronic kidney disease. Alpha Ketoanalogue belongs to a class of drugs called nutritional supplements. It follows same catabolic pathways as amino acids and works by improving the metabolism of protein in the body, thereby improving the renal function.",
+		"link": "/products/ketagxt.html"
+	},
+	{
 		"title": "ProbiTrust 15",
 		"image": "/images/4.png",
 		"alt": "ProbiTrust 15 product image",
@@ -14,18 +28,11 @@
 		"link": "/products/probitrust45.html"
 	},
 	{
-		"title": "KETAG XT",
-		"image": "/images/3.png",
-		"alt": "KETAG XT product image",
-		"description": "Alpha Ketoanalogue is used in the treatment of chronic kidney disease. Alpha Ketoanalogue belongs to a class of drugs called nutritional supplements. It follows same catabolic pathways as amino acids and works by improving the metabolism of protein in the body, thereby improving the renal function.",
-		"link": "/products/ketagxt.html"
-	},
-	{
-		"title": "RenoXcell",
-		"image": "/images/1.png",
-		"alt": "RenoXcell product image",
-		"description": "N-Acetylcysteine and Taurine work by slowing down the process of kidney cell damage and improving kidney function. These tablets are particularly beneficial in preventing the progression of microalbuminuria (the presence of small amounts of albumin in the urine) in patients with kidney disease.",
-		"link": "/products/renoxcell.html"
+		"title": "RENAFLO-10",
+		"image": "/images/renaflo10.png",
+		"alt": "RENAFLO-10 Dapagliflozin Tablets IP 10 mg product image",
+		"description": "RENAFLO-10 (Dapagliflozin Tablets IP 10 mg) is a selective SGLT2 inhibitor indicated for the treatment of Chronic Kidney Disease (CKD). By blocking SGLT2 in the kidneys, it reduces intraglomerular pressure and albuminuria, slowing the decline of kidney function and improving cardiorenal outcomes in CKD patients with and without diabetes.",
+		"link": "/products/renaflo10.html"
 	},
 	{
 		"title": "Phosclog 400",

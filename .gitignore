@@ -13,3 +13,6 @@ debug.log
 package-lock.json
 package.json
 stylelint.config.mjs
+
+# Repomix
+repomix-output.xml

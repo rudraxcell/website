@@ -113,10 +113,8 @@
 			var ld = toJsonLd(states);
 			var ldScriptId = "distributors-jsonld";
 			var existing = document.getElementById(ldScriptId);
-			if (existing) {
-				// Update static JSON-LD previously embedded server-side
-				existing.text = JSON.stringify(ld);
-			} else {
+			if (!existing) {
+				var ld = toJsonLd(states);
 				var script = document.createElement("script");
 				script.type = "application/ld+json";
 				script.id = ldScriptId;
@@ -204,11 +202,7 @@
 				})
 				.catch(function (err) {
 					console.warn("Could not load distributors.json.", err);
-					showError(
-						container,
-						"Could not load distributor data. Please try again.",
-						doFetch
-					);
+					showError(container, "Could not load distributor data. Please try again.", doFetch);
 				});
 		}
 
